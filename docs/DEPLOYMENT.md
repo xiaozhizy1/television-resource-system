@@ -205,11 +205,12 @@ docker-compose logs -f --tail=100 TRS
 如遇到问题:
 
 
-1. 查看 [GitHub Issues](https://github.com/your-repo/TRS/issues)
+1. 查看 [GitHub Issues](https://github.com/xiaozhizy1/television-resource-system/issues)
 2. 提交新的 Issue
 
 ---
 
 更新时间: 2025-11-22
+
 
 
