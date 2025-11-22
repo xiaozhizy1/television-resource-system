@@ -51,12 +51,12 @@ services:
 networks:
   trs-network:
     driver: bridge
-
+```
 
 2. **启动服务**
 ```bash
 docker-compose up -d
-```
+
 
 3. **访问系统**
 - 前端地址: http://localhost:6100
@@ -125,6 +125,7 @@ docker-compose up -d
 
 
 ⭐ 如果这个项目对你有帮助,请给个Star支持一下!
+
 
 
 
