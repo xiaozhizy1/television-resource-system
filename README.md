@@ -51,7 +51,7 @@ services:
 networks:
   trs-network:
     driver: bridge
-```bash
+```
 
 2. **启动服务**
 
@@ -125,6 +125,7 @@ docker-compose up -d
 
 
 ⭐ 如果这个项目对你有帮助,请给个Star支持一下!
+
 
 
 
