@@ -18,6 +18,7 @@
 
 ### docker-compose 部署
 
+```
 services:
   trs:
     image: xiaozhizy/television-resource-system:latest
@@ -210,3 +211,4 @@ docker-compose logs -f --tail=100 TRS
 ---
 
 更新时间: 2025-11-22
+
