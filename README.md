@@ -18,10 +18,39 @@
 
 ### 使用 Docker 部署（推荐）
 
-1. **克隆配置文件**
+1. **docker-compose**
 ```bash
-# 下载 docker-compose.example.yml
-wget https://raw.githubusercontent.com/your-repo/TRS/main/docker-compose.example.yml -O docker-compose.yml
+services:
+  trs:
+    image: xiaozhizy/television-resource-system:latest
+    container_name: trs-app
+    ports:
+      - "6100:6100"  # 前端端口
+      - "6101:6101"  # 后端端口
+    volumes:
+      # 挂载配置目录 - 所有持久化数据都在这里
+      - ./config:/config
+    environment:
+      - NODE_ENV=production
+      # 时区设置
+      - TZ=Asia/Shanghai
+      # 密钥目录
+      - SECRETS_DIR=/config
+      # 配置文件路径
+      - PAN115_COOKIE_FILE=/config/115-cookies.txt
+      # 数据库路径
+      - DATABASE_PATH=/config/database/trs.db
+      # 日志目录
+      - LOG_DIR=/config/logs
+      # 临时文件目录
+      - TEMP_DIR=/config/temp
+    restart: unless-stopped
+    networks:
+      - trs-network
+
+networks:
+  trs-network:
+    driver: bridge
 
 
 2. **启动服务**
@@ -88,5 +117,6 @@ docker-compose up -d
 - [TMDB](https://www.themoviedb.org/)
 
 ---
+
 
 ⭐ 如果这个项目对你有帮助,请给个Star支持一下!
