@@ -83,7 +83,7 @@ PORT=6100  # 前端端口
 chmod -R 755 config uploads
 ```
 
-### 步骤 3: 启动服务
+### 启动服务
 
 ```bash
 # 拉取镜像并启动
@@ -96,7 +96,7 @@ docker-compose logs -f
 docker-compose ps
 ```
 
-### 步骤 5: 访问系统
+### 访问系统
 
 - **前端地址**: http://localhost:6100
 - **后端API**: http://localhost:6101
@@ -211,4 +211,5 @@ docker-compose logs -f --tail=100 TRS
 ---
 
 更新时间: 2025-11-22
+
 
