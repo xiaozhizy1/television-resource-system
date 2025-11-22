@@ -10,9 +10,6 @@
 ### 计划中
 - 支持更多云盘平台（阿里云盘、百度网盘等）
 - 移动端适配优化
-- 多语言支持（英文、繁体中文）
-- WebDAV支持
-- 插件系统
 
 ## [1.0.0] - 2025-11-22
 
@@ -105,10 +102,10 @@
 ## 反馈
 
 如有问题或建议，请：
-- 提交 [Issue](https://github.com/your-repo/TRS/issues)
-- 参与 [讨论](https://github.com/your-repo/TRS/discussions)
-- 发送邮件至: support@example.com
+- 提交 [Issue](https://github.com/xiaozhizy1/television-resource-system/issues)
+- 发送邮件至: xiaozhizy1@gmail.com
 
 ---
+
 
 最后更新: 2025-11-22
