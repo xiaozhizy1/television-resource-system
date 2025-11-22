@@ -329,11 +329,10 @@ A: 尝试:
 ## 获取帮助
 
 - 📖 查看 [部署指南](./DEPLOYMENT.md)
-- 🐛 提交 [Issue](https://github.com/xiaozhizy1/television-resource-system/TRS/issues)
-- 💬 加入 [讨论区](https://github.com/xiaozhizy1/television-resource-system/discussions)
-
+- 🐛 提交 [Issue](https://github.com/xiaozhizy1/television-resource-system/issues)
 ---
 
 
 更新时间: 2024-01-01
+
 
