@@ -16,15 +16,39 @@
 - Docker Compose >= 1.29
 - 磁盘空间 >= 2GB
 
-### 步骤 1: 下载配置文件
+### docker-compose 部署
 
-```bash
-# 创建项目目录
-mkdir TRS && cd TRS
+services:
+  trs:
+    image: xiaozhizy/television-resource-system:latest
+    container_name: trs-app
+    ports:
+      - "6100:6100"  # 前端端口
+      - "6101:6101"  # 后端端口
+    volumes:
+      # 挂载配置目录 - 所有持久化数据都在这里
+      - ./config:/config
+    environment:
+      - NODE_ENV=production
+      # 时区设置
+      - TZ=Asia/Shanghai
+      # 密钥目录
+      - SECRETS_DIR=/config
+      # 配置文件路径
+      - PAN115_COOKIE_FILE=/config/115-cookies.txt
+      # 数据库路径
+      - DATABASE_PATH=/config/database/trs.db
+      # 日志目录
+      - LOG_DIR=/config/logs
+      # 临时文件目录
+      - TEMP_DIR=/config/temp
+    restart: unless-stopped
+    networks:
+      - trs-network
 
-# 下载 docker-compose.yml
-wget https://raw.githubusercontent.com/your-repo/TRS/main/docker-compose.example.yml -O docker-compose.yml
-
+networks:
+  trs-network:
+    driver: bridge
 
 ```
 
