@@ -1,0 +1,31 @@
+services:
+  trs:
+    image: xiaozhizy/television-resource-system:latest
+    container_name: trs-app
+    ports:
+      - "6100:6100"  # 前端端口
+      - "6101:6101"  # 后端端口
+    volumes:
+      # 挂载配置目录 - 所有持久化数据都在这里
+      - ./config:/config
+    environment:
+      - NODE_ENV=production
+      # 时区设置
+      - TZ=Asia/Shanghai
+      # 密钥目录
+      - SECRETS_DIR=/config
+      # 配置文件路径
+      - PAN115_COOKIE_FILE=/config/115-cookies.txt
+      # 数据库路径
+      - DATABASE_PATH=/config/database/trs.db
+      # 日志目录
+      - LOG_DIR=/config/logs
+      # 临时文件目录
+      - TEMP_DIR=/config/temp
+    restart: unless-stopped
+    networks:
+      - trs-network
+
+networks:
+  trs-network:
+    driver: bridge
