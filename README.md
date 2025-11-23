@@ -53,6 +53,11 @@ networks:
     driver: bridge
 ```
 
+# 如发现有些功能不能用
+# 请直接删除config目录里面的所有文件尤其是数据库文件从新生成
+# 基本上可以修复大多数不能保存不能识别的问题
+
+
 2. **启动服务**
 
 docker-compose up -d
@@ -126,6 +131,7 @@ docker-compose up -d
 
 
 ⭐ 如果这个项目对你有帮助,请给个Star支持一下!
+
 
 
 
